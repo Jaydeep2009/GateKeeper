@@ -1,7 +1,7 @@
 package com.gatekeeper.gatekeeper.service;
 
-import com.gatekeeper.model.ApiConfig;
-import com.gatekeeper.repository.ApiConfigRepository;
+import com.gatekeeper.gatekeeper.model.ApiConfig;
+import com.gatekeeper.gatekeeper.repository.ApiConfigRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;

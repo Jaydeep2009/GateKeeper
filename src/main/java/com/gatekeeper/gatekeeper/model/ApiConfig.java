@@ -18,16 +18,8 @@ public class ApiConfig {
     private String authType;
     private String proxyKey;
 
-    // Foreign key
     @Column(name = "user_id")
     private Long userId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    private User user;
-
-    // Constructors
     public ApiConfig() {}
-
-    // Getters & Setters
 }
