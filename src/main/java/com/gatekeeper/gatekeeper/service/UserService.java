@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-
 
 @Service
 @AllArgsConstructor
@@ -29,6 +27,7 @@ public class UserService {
         User user= new User();
         user.setEmail(request.getEmail());
         user.setPassword(hashedPassword);
+        user.setCreatedAt(java.time.LocalDateTime.now());
         return userRepository.save(user);
     }
 
