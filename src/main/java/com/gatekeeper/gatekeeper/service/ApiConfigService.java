@@ -1,6 +1,7 @@
 package com.gatekeeper.gatekeeper.service;
 
 import com.gatekeeper.gatekeeper.dto.ApiConfigRequest;
+import com.gatekeeper.gatekeeper.enums.AuthType;
 import com.gatekeeper.gatekeeper.model.ApiConfig;
 import com.gatekeeper.gatekeeper.repository.ApiConfigRepository;
 import lombok.AllArgsConstructor;
@@ -22,7 +23,9 @@ public class ApiConfigService {
         ApiConfig apiConfig = new ApiConfig();
         apiConfig.setBaseUrl(request.getBaseUrl());
         apiConfig.setApiKey(request.getApiKey());
-        apiConfig.setAuthType(request.getAuthType());
+        apiConfig.setAuthType(AuthType.valueOf(request.getAuthType()));
+        apiConfig.setAuthParamName(request.getAuthParamName());
+        apiConfig.setAuthHeaderName(request.getAuthHeaderName());
         apiConfig.setProxyKey(proxyKey);
         apiConfig.setUserId(userId);
         return apiConfigRepository.save(apiConfig);

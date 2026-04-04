@@ -14,7 +14,7 @@ public class RateLimiterService {
 
     private final Map<Long, List<LocalDateTime>> requestMap = new ConcurrentHashMap<>();
 
-    private static final int LIMIT = 100; // Max requests per minute
+    private static final int LIMIT = 3; // Max requests per minute
     private static final int WINDOW_SECONDS = 60; // Time window in minutes
 
     //check if allowed
