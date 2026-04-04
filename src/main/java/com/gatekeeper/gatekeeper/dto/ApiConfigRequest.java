@@ -9,5 +9,4 @@ public class ApiConfigRequest {
     private String baseUrl;
     private String apiKey;
     private String authType;
-    private String userId;
 }
